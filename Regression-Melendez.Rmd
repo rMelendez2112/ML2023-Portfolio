@@ -7,6 +7,8 @@ editor_options:
   chunk_output_type: inline
 ---
 
+https://github.com/rMelendez2112/ML2023-Portfolio/blob/936b6cd95062085978e56db4d231e803ceff0b9a/Regression-Melendez.Rmd
+
 Linear Regression is used to try and predict the value of an item in a data
 set with another. This data can be mapped to a graph that can indicate just
 how much these variables affect one another. The strengths of Linear Regression
