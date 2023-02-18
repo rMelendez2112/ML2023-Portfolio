@@ -1,12 +1,13 @@
 ---
-title: "R Notebook"
-output: html_notebook
+title: "Classification on DnD Character Data Set"
+author: "Rafael Melendez"
+output:
+  html_notebook
+editor_options:
+  chunk_output_type: inline
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
-### Load Dataset
+https://github.com/rMelendez2112/ML2023-Portfolio/blob/936b6cd95062085978e56db4d231e803ceff0b9a/Classification-Melendez.Rmd
 
 ```{r}
 dndStats <- "C:\\Users\\bayon\\OneDrive\\Documents\\stats.csv"
