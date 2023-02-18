@@ -87,5 +87,12 @@ and don't make assumptions about features in a dataset. Still, Logistic Regressi
 are limited to discrete functions and are bound to a certain range.
 
 #H
+Mean squared error is a good metric to make sure that possible outliers in a 
+dataset don't create wildly inaccurate predictions. It, however, runs a small chance 
+of making an outlier worse on the predicted data.
+RMSE places a priority on errors in the data set to single out larger errors. A disadvantage 
+of RMSE is that it cannot function as optimally in the presence of outliers.
+Correlation is a low-cost, relatively straightforward metric. Still, correlation does 
+not equal causation and may fall flat in the presence of more indicative, complex metrics.
 
 
