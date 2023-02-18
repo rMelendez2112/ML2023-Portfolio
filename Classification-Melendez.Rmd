@@ -1,0 +1,90 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+### Load Dataset
+
+```{r}
+dndStats <- "C:\\Users\\bayon\\OneDrive\\Documents\\stats.csv"
+content <- read.csv(dndStats)
+
+print(content)
+
+
+sdata <- read.csv("C:\\Users\\bayon\\OneDrive\\Documents\\stats.csv", header = TRUE, sep = ",")
+sdata
+```
+
+### Divide into 80/20 Test & Train set
+```{r}
+#A
+str(sdata)
+
+set.seed(1234)
+i <- sample(1:nrow(sdata), nrow(sdata)*0.8, replace=FALSE)
+train <- sdata[i,]
+test <- sdata[-i,]
+
+#B
+names(sdata)
+ncol(sdata)
+tail(sdata, n = 10)
+colSums(is.na(sdata))
+summary(sdata)
+```
+
+### Create 2 Informative Graphs
+```{r}
+#C
+
+plot(sdata$weight~sdata$height, xlab = "Height", ylab = "Weight")
+abline(lm(sdata$weight~sdata$height), col="aquamarine")
+
+plot(sdata$charisma~sdata$height, xlab = "Height", ylab = "Charisma")
+abline(lm(sdata$weight~sdata$height), col = "aquamarine")
+```
+
+### Build a Logistic Regression Model
+```{r}
+#D
+
+glm1 <- glm(as.factor(race)~height, data = train, family = "binomial")
+summary(glm1)
+```
+
+### Build a Naïve Bayes Model
+```{r}
+#install.packages("e1071")
+library(e1071)
+nb1 <- naiveBayes(race~., data = train)
+nb1
+```
+
+```{r}
+p1 <- predict(nb1, newdata = test, type = "class")
+table(p1, test$height)
+mean(p1 == test$height)
+```
+
+```{r}
+#F
+
+
+```
+
+
+#G
+Some advantages of the Naïve Bayes algorithm include its ability to perform 
+multi-class predictions along with a quick processing time. Its disadvantages
+include its assumption that features are all independent and computational cost.
+Logistic Regression models are, in comparison, more approachable/easier to train on 
+and don't make assumptions about features in a dataset. Still, Logistic Regression models 
+are limited to discrete functions and are bound to a certain range.
+
+#H
+
+

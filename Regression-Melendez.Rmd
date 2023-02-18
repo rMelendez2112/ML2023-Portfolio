@@ -1,0 +1,122 @@
+---
+title: "Linear Regression on DnD Character Data Set"
+author: "Rafael Melendez"
+output:
+  html_notebook
+editor_options:
+  chunk_output_type: inline
+---
+
+Linear Regression is used to try and predict the value of an item in a data
+set with another. This data can be mapped to a graph that can indicate just
+how much these variables affect one another. The strengths of Linear Regression
+lie in the simplicity of its design along with its low computational cost. 
+Its weaknesses, however, manifest in relationships between variables that don't 
+necessarily follow linear trends.
+
+### Load Dataset
+
+```{r}
+dndStats <- "C:\\Users\\bayon\\OneDrive\\Documents\\stats.csv"
+content <- read.csv(dndStats)
+
+print(content)
+
+
+sdata <- read.csv("C:\\Users\\bayon\\OneDrive\\Documents\\stats.csv", header = TRUE, sep = ",")
+sdata
+```
+
+### Divide into 80/20 Test & Train set
+```{r}
+#A
+str(sdata)
+
+set.seed(1234)
+i <- sample(1:nrow(sdata), nrow(sdata)*0.8, replace=FALSE)
+train <- sdata[i,]
+test <- sdata[-i,]
+
+#B
+names(sdata)
+ncol(sdata)
+tail(sdata, n = 10)
+colSums(is.na(sdata))
+summary(sdata)
+```
+
+### Create 2 Informative Graphs
+```{r}
+#C
+
+plot(sdata$weight~sdata$height, xlab = "Height", ylab = "Weight")
+abline(lm(sdata$weight~sdata$height), col="aquamarine")
+
+plot(sdata$charisma~sdata$height, xlab = "Height", ylab = "Charisma")
+abline(lm(sdata$weight~sdata$height), col = "aquamarine")
+```
+
+### Build Simple Linear Regression Model
+```{r}
+#D
+
+lm1 <- lm(weight~height, data = sdata)
+lm1
+summary(lm1)
+
+plot(lm1)
+
+
+
+#E
+fit = lm(weight ~ height, sdata)
+plot(fit)
+```
+
+### Build Multiple Linear Regression Model
+```{r}
+#F
+
+data <- sdata[ , c("height", "weight", "speed", "strength")]
+head(data)
+
+pairs(data, pch = 18, col = "steelblue")
+```
+
+### Build Polynomial RegressionModel
+```{r}
+#G
+#install.packages("tidyverse")
+#install.packages("caret")
+library(tidyverse)
+library(caret)
+theme_set(theme_classic())
+ 
+# Build the model
+model <- lm(height ~ poly(weight, 5, raw = TRUE), data = train)
+# Make predictions
+predictions <- model %>% predict(test)
+# Model performance
+data.frame(RMSE = RMSE(predictions, test$height),
+           R2 = R2(predictions, test$height))
+   
+ggplot(train, aes(height, weight) ) + geom_point() +
+stat_smooth(method = lm, formula = y ~ poly(x, 5, raw = TRUE))
+
+```
+
+The simple linear model was relatively the most straightforward in providing 
+conclusions on the linear relationships. I found the best linear model, however, 
+to be the multiple regression model. It was able to show a more complete summary
+of relationships between multiple variables, something which a simple regression
+graph or polynomial regression don't provide immediately.
+
+```{r}
+#I
+print("Simple Linear Model: ")
+pred <- predict(lm1, test)
+correlation <- cor(pred, test)
+print("SLM Correlation: ", correlation)
+
+```
+
