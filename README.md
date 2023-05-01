@@ -2,7 +2,6 @@
 <body>
 
 <a href="https://github.com/rMelendez2112/ML2023-Portfolio/blob/dc4fd5085c2a2680d9a32772b5b0a186f0f13e29/Overview%20of%20ML.pdf">Overview of ML</a>
-<p>Brief Description</p>
 
 <a href="https://github.com/rMelendez2112/ML2023-Portfolio/blob/cc74b5604036f3012aff03119df11a1c7202c95c/C++%20Data%20Exploration.pdf">
 C++ Data Exploration</a>
@@ -17,6 +16,14 @@ C++ Data Exploration</a>
 
 <a href="https://github.com/rMelendez2112/ML2023-Portfolio/blob/0c2e7b28d35011f0f04b585eb7ddf4d1ab80231c/ImageClassificationWithDL.ipynb">Image Classification with DL</a>
 
+Technical Skills
+<p>Languages: Python, R, C++</p>
+<p>Editors: Google Colab, RStudio, CodeBlocks, Visual Studio Code</p>
+
+Soft Skills
+<p>Has successfuly coordinated colaborative team projects</p>
+
+<p>This class wasn't my first brush with machine learning concepts or applications, but it helped solidify the concepts better than if I hadn't enrolled. I first explored ML programs in Google Colab, but this was my first time applying these algorithms and concepts in languages other than Python, namely C++ and R. Concerning future endeavors in Machine Learning, I would like to first try and create personal projects using the concepts and methodologies I've picked up. To be more specific, I want to explore deep learning further to use automation in unique ways. One potential project I have in mind is a web application that generates bass melodies based off a Roland TB-303 style sound with an internal sequencer. I know this is possible because there was a web app I found not to long ago that did the exact same thing.</p>
 
 </body>
 
