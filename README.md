@@ -20,5 +20,3 @@ C++ Data Exploration</a>
 
 </body>
 
-
-<a href=""> </a>
