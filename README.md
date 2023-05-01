@@ -2,12 +2,11 @@
 <body>
 
 <a href="https://github.com/rMelendez2112/ML2023-Portfolio/blob/dc4fd5085c2a2680d9a32772b5b0a186f0f13e29/Overview%20of%20ML.pdf">Overview of ML</a>
+<p>Brief Description</p>
 
-bla bla bla blasdnsadnsaodn
 <a href="https://github.com/rMelendez2112/ML2023-Portfolio/blob/cc74b5604036f3012aff03119df11a1c7202c95c/C++%20Data%20Exploration.pdf">
 C++ Data Exploration</a>
 
-bla bla bla blasdnsadnsaodn
 <a href="https://github.com/rMelendez2112/ML2023-Portfolio/blob/0c2e7b28d35011f0f04b585eb7ddf4d1ab80231c/Classification-Melendez.Rmd">Linear Models</a>
 
 <a href="https://github.com/rMelendez2112/ML2023-Portfolio/blob/0c2e7b28d35011f0f04b585eb7ddf4d1ab80231c/dataexploration.cpp">C++ Algorithms From Scratch</a>
