@@ -16,12 +16,13 @@ C++ Data Exploration</a>
 
 <a href="https://github.com/rMelendez2112/ML2023-Portfolio/blob/0c2e7b28d35011f0f04b585eb7ddf4d1ab80231c/ImageClassificationWithDL.ipynb">Image Classification with DL</a>
 
-Technical Skills
+<b>Technical Skills</b>
 <p>Languages: Python, R, C++</p>
 <p>Editors: Google Colab, RStudio, CodeBlocks, Visual Studio Code</p>
 
 Soft Skills
-<p>Has successfuly coordinated colaborative team projects</p>
+<p>Has successfuly coordinated collaborative team projects</p>
+<p>Experienced in project documentation</p>
 
 <p>This class wasn't my first brush with machine learning concepts or applications, but it helped solidify the concepts better than if I hadn't enrolled. I first explored ML programs in Google Colab, but this was my first time applying these algorithms and concepts in languages other than Python, namely C++ and R. Concerning future endeavors in Machine Learning, I would like to first try and create personal projects using the concepts and methodologies I've picked up. To be more specific, I want to explore deep learning further to use automation in unique ways. One potential project I have in mind is a web application that generates bass melodies based off a Roland TB-303 style sound with an internal sequencer. I know this is possible because there was a web app I found not to long ago that did the exact same thing.</p>
 
